@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support AI Agent</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <div class="chat-container">
@@ -14,7 +16,11 @@
                     <div class="agent-avatar">🤖</div>
                     <div>
                         <h1 id="agent-name">AI Support Agent</h1>
-                        <p class="status">Online</p>
+                        <p class="status">
+                            <span>Online</span>
+                            <span>•</span>
+                            <span>Typically replies instantly</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -38,8 +44,9 @@
                     class="message-input" 
                     placeholder="Type your message here..."
                     autocomplete="off"
+                    aria-label="Type your message"
                 />
-                <button type="submit" class="send-button" id="sendButton">
+                <button type="submit" class="send-button" id="sendButton" aria-label="Send message">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

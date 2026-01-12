@@ -26,10 +26,17 @@ async function loadAgentConfig() {
 }
 
 // Send initial greeting
-function sendInitialGreeting() {
+async function sendInitialGreeting() {
     const greetingElement = document.getElementById('initial-greeting');
     if (greetingElement) {
-        greetingElement.textContent = "Hello! I'm your support assistant. How can I help you today?";
+        try {
+            const response = await fetch('/api/config');
+            const config = await response.json();
+            const agentName = config.agent_name || 'AI Support Agent';
+            greetingElement.textContent = `Hello! I'm ${agentName}, your support assistant. How can I help you today?`;
+        } catch (error) {
+            greetingElement.textContent = "Hello! I'm your support assistant. How can I help you today?";
+        }
     }
 }
 
