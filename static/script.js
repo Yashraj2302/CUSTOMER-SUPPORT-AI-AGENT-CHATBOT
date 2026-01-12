@@ -46,11 +46,19 @@ function setupEventListeners() {
     const messageInput = document.getElementById('messageInput');
     
     chatForm.addEventListener('submit', handleSubmit);
-    messageInput.addEventListener('keypress', (e) => {
+    
+    // Handle Enter key (Shift+Enter for new line, Enter to send)
+    messageInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             handleSubmit(e);
         }
+    });
+    
+    // Auto-resize textarea
+    messageInput.addEventListener('input', () => {
+        messageInput.style.height = 'auto';
+        messageInput.style.height = Math.min(messageInput.scrollHeight, 200) + 'px';
     });
 }
 
@@ -68,6 +76,7 @@ async function handleSubmit(e) {
     // Add user message to chat
     addMessageToChat(message, 'user');
     messageInput.value = '';
+    messageInput.style.height = 'auto';
     
     // Show typing indicator
     showTypingIndicator();

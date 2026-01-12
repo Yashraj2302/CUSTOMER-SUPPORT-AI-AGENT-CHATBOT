@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI-powered Customer Support Chatbot - Get instant help with your questions">
+    <meta name="description" content="AI-powered Customer Support Chatbot">
     <title>Customer Support AI Agent</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <div class="header-content">
-                <div class="agent-info">
-                    <div class="agent-avatar">🤖</div>
-                    <div>
-                        <h1 id="agent-name">AI Support Agent</h1>
-                        <p class="status">
-                            <span>Online</span>
-                            <span>•</span>
-                            <span>Typically replies instantly</span>
-                        </p>
-                    </div>
+            <div class="agent-info">
+                <div class="agent-avatar">🤖</div>
+                <div>
+                    <h1 id="agent-name">AI Support Agent</h1>
+                    <p class="status">
+                        <span>Online</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -40,18 +33,17 @@
         
         <div class="chat-input-container">
             <form id="chatForm" class="chat-form">
-                <input 
-                    type="text" 
+                <textarea 
                     id="messageInput" 
                     class="message-input" 
-                    placeholder="Type your message here..."
+                    placeholder="Message AI Support Agent..."
+                    rows="1"
                     autocomplete="off"
                     aria-label="Type your message"
-                />
+                ></textarea>
                 <button type="submit" class="send-button" id="sendButton" aria-label="Send message">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </form>
