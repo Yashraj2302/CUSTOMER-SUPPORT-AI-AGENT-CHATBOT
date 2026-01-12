@@ -1,0 +1,15 @@
+# Files to ignore when deploying to Vercel
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+.venv
+.vscode/
+.idea/
+*.swp
+*.swo

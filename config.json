@@ -1,0 +1,26 @@
+{
+  "brand_name": "Your Company",
+  "agent_name": "Alex",
+  "industry": "Customer Support",
+  "tone": "friendly",
+  "company_name": "Your Company Name",
+  "products": [
+    "Product A",
+    "Product B",
+    "Product C"
+  ],
+  "policies": [
+    "Returns",
+    "Shipping",
+    "Warranty",
+    "Refunds"
+  ],
+  "common_issues": [
+    "Order status inquiries",
+    "Technical support",
+    "Billing questions",
+    "Product information"
+  ],
+  "doc_date": "2024-01-01",
+  "faq_count": "100"
+}
